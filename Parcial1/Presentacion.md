@@ -12,9 +12,3 @@ encabezado1     | encabezado2
 elem 1 1        | elem 1 2
 elem 2 1        | elem 2 2
 
-
-
-
-
-
-
