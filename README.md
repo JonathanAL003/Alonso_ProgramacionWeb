@@ -7,7 +7,3 @@
 <br></br>
 
 ![LogoTec](http://www.itnuevolaredo.edu.mx/images/resources/Soto/Logo/Logo.png)
-
-<br></br>
-
-![LogoISC](http://www.itnuevolaredo.edu.mx/takeyas/images/logo_isc.gif)
