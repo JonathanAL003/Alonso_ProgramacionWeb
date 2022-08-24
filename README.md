@@ -1,6 +1,13 @@
 # INSTITUTO TECNOLOGICO DE NUEVO LAREDO
 
-## Programación Web
+## Programación Web:computer:
 
 **Nombre del Alumno:** *Jonathan Alonso Lara*  
-**Numero de control:** *#19100141*
+**Numero de control:** *#19100141*  
+<br></br>
+
+![LogoTec](http://www.itnuevolaredo.edu.mx/images/resources/Soto/Logo/Logo.png)
+
+<br></br>
+
+![LogoISC](http://www.itnuevolaredo.edu.mx/takeyas/images/logo_isc.gif)
