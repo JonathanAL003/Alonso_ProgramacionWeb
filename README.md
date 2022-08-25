@@ -7,5 +7,7 @@
 <br></br>
 
 <center>
+  
 ![LogoTec](http://www.itnuevolaredo.edu.mx/images/resources/Soto/Logo/Logo.png)
+
 </center>
