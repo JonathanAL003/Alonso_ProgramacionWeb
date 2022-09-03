@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla</title>
+        <link rel="stylesheet" type="text/css" href="Tabla.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div style="text-align: center;">
+            <img src="img/logo-toweroffantasy.png">
+        </div>
+
+        <center>
+        <ul class="nav nav-tabs list" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Recetas Blancas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Recetas Verdes</button>
+            </li>
+            <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Recetas Azules</button>
+            </li>
+            <li class="nav-item" role="presentation">
+            <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Recetas Moradas</button>
+            </li>
+        </ul>
+        </center>
+        <br>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <center><table class="tablepress tablaRecetas" role="grid">
+                    <thead>
+                        <tr class="row-1 odd" role="row">
+                            <!--<th rowspan="1" colspan="1" style="width: 119.85px;">Desbloqueada</th>-->
+                            <th rowspan="1" colspan="1" style="width: 200px;">Receta</th>
+                            <th rowspan="1" colspan="1" style="width: 100px;">Estrellas</th>
+                            <th rowspan="1" colspan="1" style="width: 250px;">Efecto</th>
+                            <th rowspan="1" colspan="1" style="width: 400px;">Ingredientes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="row-hover">
+                        <tr class="row-3 even">
+                            <!--<td class="centrado">
+                                <input class="form-check-input" type="checkbox" value="true" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">: Desbloqueada</label>
+                            </td>-->
+                            <td class="column-1"><img src="img/pescado-asado-crujiente.png" class="grisBG "><br>
+                                <p class="titRecetas">Pescado Asado Crujiente</p><br>
+                            </td>
+                            <td class="column-2"><span class="estGris">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p></td>
+                            <td class="column-4">
+                                <div class="blockIng"><img src="img/lubina-plateada.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Lubina Plateada</p></div>
+                            </td>
+                        </tr>                        
+                        <tr class="row-4 odd">
+                            <td class="column-1"><img src="img/pan-integral.png" class="grisBG "><br>
+                                <p class="titRecetas">Pan Integral</p>
+                            </td>
+                            <td class="column-2"><span class="estGris">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Grano Homi</p></div></td>
+                        </tr>
+                        <tr class="row-7 even">
+                            <td class="column-1"><img src="img/huevo-frito.png" class="grisBG "><br>
+                                <p class="titRecetas">Huevo Frito</p>
+                            </td>
+                            <td class="column-2"><span class="estGris">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>10%</b> + <b>1,500</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                        </tr>
+                        <tr class="row-2 odd">
+                            <td class="column-1"><img src="img/hongos-fritos.png" class="grisBG "><br>
+                                <p class="titRecetas">Hongos Fritos</p>
+                            </td>
+                            <td class="column-2"><span class="estGris">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>5</b> de Saciedad</p><p class="efectoRec">Recupera <b>10%</b> + <b>1,500</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/hongo.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Hongo</p></div></td>
+                        </tr>
+                        <tr class="row-6 even">
+                            <td class="column-1"><img src="img/ensalada-de-lechuga.png" class="grisBG "><br>
+                                <p class="titRecetas">Ensalada de Lechuga</p>
+                            </td>
+                            <td class="column-2"><span class="estGris">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>10%</b> + <b>1,500</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Lechuga</p></div><div class="blockIng"><img src="img/aderezo-de-ensalada.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Aderezo de Ensalada</p></div></td>
+                        </tr>
+                        <tr class="row-5 odd">
+                            <td class="column-1"><img src="img/carne-muy-caliente.png" class="grisBG "><br>
+                                <p class="titRecetas">Carne Muy Caliente</p>
+                            </td>
+                            <td class="column-2"><span class="estGris">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/carne-de-caza.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Carne de Caza</p></div></td>
+                        </tr>
+                    </tbody>
+                </table></center>
+            </div>
+
+
+            
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <center>
+                <table class="tablepress tablaRecetas" role="grid">
+                    <thead>
+                        <tr class="row-1 odd" role="row">
+                            <th rowspan="1" colspan="1" style="width: 200px;">Receta</th>
+                            <th rowspan="1" colspan="1" style="width: 100px;">Estrellas</th>
+                            <th rowspan="1" colspan="1" style="width: 250px;">Efecto</th>
+                            <th rowspan="1" colspan="1" style="width: 400px;">Ingredientes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="row-hover">
+                        <tr class="row-2 even">
+                            <td class="column-1"><img src="img/sopa-de-algas-y-huevo.png" class="verdeBG "><br>
+                                <p class="titRecetas">Sopa de Algas y Huevo</p>
+                            </td>                            
+                            <td class="column-2"><span class="estVerde">🟊</span></td>                            
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>                            
+                            <td class="column-4"><div class="blockIng"><img src="img/alga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Algas</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                        </tr>
+                        <tr class="row-3 odd">
+                            <td class="column-1"><img src="img/desayuno-de-cereales.png" class="verdeBG "><br>
+                                <p class="titRecetas">Desayuno de Cereales</p>
+                            </td>                            
+                            <td class="column-2"><span class="estVerde">🟊</span>
+                            </td>                            
+                            <td class="column-3"><p class="efectoRec">Recupera <b>14</b> de Saciedad</p></td>                            
+                            <td class="column-4"><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Grano Homi</p></div><div class="blockIng"><img src="img/leche.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Leche</p></div></td>
+                        </tr>
+                        <tr class="row-4 even">
+                            <td class="column-1"><img src="img/hamburguesa-de-pollo-crujiente.png" class="verdeBG "><br>
+                                <p class="titRecetas">Hamburguesa de Pollo Crujiente</p>
+                            </td>                            
+                            <td class="column-2"><span class="estVerde">🟊</span></td>                            
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>                            
+                            <td class="column-4"><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Grano Homi</p></div><div class="blockIng"><img src="img/carne-de-ave.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Carne de Ave</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Lechuga</p></div></td>
+                        </tr>
+                        <tr class="row-5 odd">
+                            <td class="column-1"><img src="img/arroz-y-huevo-frito.png" class="verdeBG "><br>
+                                <p class="titRecetas">Arroz y Huevo Frito</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>14</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/arroz.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                        </tr>
+                        <tr class="row-6 even">
+                            <td class="column-1"><img src="img/huevo-dorado-y-tomate.png" class="verdeBG "><br>
+                                <p class="titRecetas">Huevo Dorado y Tomate</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/tomate-espinoso.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Tomate Espinoso</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                        </tr>
+                        <tr class="row-7 odd">
+                            <td class="column-1"><img src="img/sopa-de-hongos.png" class="verdeBG "><br>
+                                <p class="titRecetas">Sopa de hongos</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/hongo.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Hongo</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Lechuga</p></div></td>
+                        </tr>
+                        <tr class="row-8 even">
+                            <td class="column-1"><img src="img/caracoles-al-vapor.png" class="verdeBG "><br>
+                                <p class="titRecetas">Caracoles al Vapor</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/caracol.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Caracol</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Lechuga</p></div></td>
+                        </tr>
+                        <tr class="row-9 odd">
+                            <td class="column-1"><img src="img/estofado-de-carne-y-papas.png" class="verdeBG "><br>
+                                <p class="titRecetas">Estofado de Carne y Papas</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>14</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/papa.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Papa</p></div><div class="blockIng"><img src="img/carne-de-caza.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Carne de Caza</p></div></td>
+                        </tr>
+                        <tr class="row-10 even">
+                            <td class="column-1"><img src="img/papas-fritas.png" class="verdeBG "><br>
+                                <p class="titRecetas">Papas Fritas</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>14</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/papa.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Papa</p></div><div class="blockIng"><img src="img/aderezo-de-ensalada.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Aderezo de Ensalada</p></div></td>
+                        </tr>
+                        <tr class="row-11 odd">
+                            <td class="column-1"><img src="img/ensalada-de-vegetales.png" class="verdeBG "><br>
+                                <p class="titRecetas">Ensalada de Vegetales</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/fruta-caida.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Fruta Caída</p></div><div class="blockIng"><img src="img/tomate-espinoso.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Tomate Espinoso</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Lechuga</p></div><div class="blockIng"><img src="img/aderezo-de-ensalada.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Aderezo de Ensalada</p></div></td>
+                        </tr>
+                        <tr class="row-12 even">
+                            <td class="column-1"><img src="img/pollo-frito.png" class="verdeBG "><br>
+                                <p class="titRecetas">Pollo Frito</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/carne-de-ave.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Carne de Ave</p></div><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Grano Homi</p></div></td>
+                        </tr>
+                        <tr class="row-13 odd">
+                            <td class="column-1"><img src="img/jugo-de-frutas-y-miel.png" class="verdeBG "><br>
+                                <p class="titRecetas">Jugo de Frutas y Miel</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>300</b> de Resistencia</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/fruta-caida.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Fruta Caída</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Miel</p></div><div class="blockIng"><img src="img/agua-con-gas.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Agua con Gas</p></div></td>
+                        </tr>
+                        <tr class="row-14 even">
+                            <td class="column-1"><img src="img/orquidea-helada.png" class="verdeBG "><br>
+                                <p class="titRecetas">Orquídea Helada</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>300</b> de Resistencia</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/hongo-fantasma.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Hongo Fantasma</p></div><div class="blockIng"><img src="img/leche.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Leche</p></div><div class="blockIng"><img src="img/agua-con-gas.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Agua con Gas</p></div></td>
+                        </tr>
+                        <tr class="row-15 odd">
+                            <td class="column-1"><img src="img/brocoli-salteado.png" class="verdeBG "><br>
+                                <p class="titRecetas">Brócoli Salteado</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>14</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/brocoli.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Brócoli</p></div></td>
+                        </tr>
+                        <tr class="row-16 even">
+                            <td class="column-1"><img src="img/brocoli-salteado.png" class="verdeBG "><br>
+                                <p class="titRecetas">Sopa de Hongos y Diente de León</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/semilla-de-diente-de-leon.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Semilla de Diente de Leon</p></div><div class="blockIng"><img src="img/hongo.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Hongo</p></div></td>
+                        </tr>
+                        <tr class="row-17 odd">
+                            <td class="column-1"><img src="img/panecillo-de-carne.png" class="verdeBG "><br>
+                                <p class="titRecetas">Panecillo de Carne</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>14</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Grano Homi</p></div><div class="blockIng"><img src="img/carne-de-caza.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Carne de Caza</p></div></td>
+                        </tr>
+                        <tr class="row-18 even">
+                            <td class="column-1"><img src="img/pescado-con-hongos.png" class="verdeBG "><br>
+                                <p class="titRecetas">Pescado con Hongos</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>7</b> de Saciedad</p><p class="efectoRec">Recupera <b>12%</b> + <b>3,300</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/hongo.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Hongo</p></div><div class="blockIng"><img src="img/lubina-plateada.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Lubina Plateada</p></div></td>
+                        </tr>
+                        <tr class="row-19 odd">
+                            <td class="column-1"><img src="img/pescado-con-hongos.png" class="verdeBG "><br>
+                                <p class="titRecetas">Pescado con Huevo</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>8</b> de Saciedad</p><p class="efectoRec">Recupera <b>13%</b> + <b>10,000</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/esturion-de-darby.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Esturión de Darby</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                        </tr>
+                        <tr class="row-20 even">
+                            <td class="column-1"><img src="img/pan-de-trigo-rojo.png" class="verdeBG "><br>
+                                <p class="titRecetas">Pan de Trigo Rojo</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>16</b> de Saciedad</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/arroz-marron.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz Integral</p></div></td>
+                        </tr>
+                        <tr class="row-21 odd">
+                            <td class="column-1"><img src="img/sopa-de-hongo-de-fuego.png" class="verdeBG "><br>
+                                <p class="titRecetas">Sopa de Hongo de Fuego</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>100</b> de Resistencia</p><p class="efectoRec">Recupera <b>13%</b> + <b>10,000</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/hongo-de-fuego.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Hongo de Fuego</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Lechuga</p></div></td>
+                        </tr>
+                        <tr class="row-22 even">
+                            <td class="column-1"><img src="img/sopa-de-musgo-negro.png" class="verdeBG "><br>
+                                <p class="titRecetas">Sopa de Musgo Negro</p>
+                            </td>
+                            <td class="column-2"><span class="estVerde">🟊🟊</span></td>
+                            <td class="column-3"><p class="efectoRec">Recupera <b>8</b> de Saciedad</p><p class="efectoRec">Recupera <b>13%</b> + <b>10,000</b> PS</p></td>
+                            <td class="column-4"><div class="blockIng"><img src="img/musgo-negro.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Musgo Negro</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Lechuga</p></div></td>
+                        </tr>
+                    </tbody>
+                </table></center>
+            </div>
+
+
+
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <center>
+                <table class="tablepress tablaRecetas" role="grid">
+                    <thead>
+                        <tr>
+                            <th rowspan="1" colspan="1" style="width: 200px;">Receta</th>
+                            <th rowspan="1" colspan="1" style="width: 100px;">Estrellas</th>
+                            <th rowspan="1" colspan="1" style="width: 250px;">Efecto</th>
+                            <th rowspan="1" colspan="1" style="width: 400px;">Ingredientes</th>
+                        </tr>
+                    </thead>
+                <tbody class="row-hover">
+                    <tr class="row-2 even">
+                        <td class="column-1"><img src="img/sopa-de-marsicos.png" class="azulBG "><br>
+                            <p class="titRecetas">Sopa de Mariscos</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño de Hielo <b>+1%</b></p><p class="efectoRec">Daño de Hielo <b>+45</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/caracol.png" class="ingredientes "><span class="cantIngr">3</span><p class="titIngredientes">Caracol</p></div><div class="blockIng"><img src="img/vieira.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Vieira</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Lechuga</p></div></td>
+                    </tr>
+                    <tr class="row-3 odd">
+                        <td class="column-1"><img src="img/hamburguesa-especiada.png" class="azulBG "><br>
+                            <p class="titRecetas">Hamburguesa Picante</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño Físico <b>+1%</b></p><p class="efectoRec">Daño Físico <b>+45</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">3</span><p class="titIngredientes">Grano Homi</p></div><div class="blockIng"><img src="img/muslo-trasero.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Muslo Trasero</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Lechuga</p></div></td>
+                    </tr>
+                    <tr class="row-4 even">
+                        <td class="column-1"><img src="img/cangrejo-al-vapor.png" class="azulBG "><br>
+                            <p class="titRecetas">Cangrejo al Vapor</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>15% + 20,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/portunid.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Portunid</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Lechuga</p></div></td>
+                    </tr>
+                    <tr class="row-5 odd">
+                        <td class="column-1"><img src="img/soda-helada-de-frutilla.png" class="azulBG "><br>
+                            <p class="titRecetas">Refresco de Fresa Helado</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Resistencia al Fuego <b>+10%</b></p><p class="efectoRec">Resistencia al Fuego <b>+170</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/frutilla.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Frutilla</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Miel</p></div><div class="blockIng"><img src="img/agua-con-gas.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Agua con Gas</p></div></td>
+                    </tr>
+                    <tr class="row-6 even">
+                        <td class="column-1"><img src="img/soda-helada-de-frutilla.png" class="azulBG "><br>
+                            <p class="titRecetas">Soda Helada de Frutilla</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Resistencia Eléctrica<b>+10%</b></p><p class="efectoRec">Resistencia Eléctrica <b>+170</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/frasco-de-arandanos.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Frasco de Arándanos</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Miel</p></div><div class="blockIng"><img src="img/agua-con-gas.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Agua con Gas</p></div></td>
+                    </tr>
+                    <tr class="row-7 odd">
+                        <td class="column-1"><img src="img/ensalada-poderosa-simple.png" class="azulBG "><br>
+                            <p class="titRecetas">Ensalada Poderosa Simple</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Resistencia Física <b>+10%</b></p><p class="efectoRec">Resistencia Física <b>+170</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/brocoli.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Brócoli</p></div><div class="blockIng"><img src="img/tomate-espinoso.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Tomate Espinoso</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Lechuga</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Huevo de Ave</p></div><div class="blockIng"><img src="img/aderezo-de-ensalada.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Aderezo de Ensalada</p></div></td>
+                    </tr>
+                    <tr class="row-8 even">
+                        <td class="column-1"><img src="img/huevo-al-vapor-con-erizo-de-mar.png" class="azulBG "><br>
+                            <p class="titRecetas">Huevo al Vapor con Erizo de Mar</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>15% + 20,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/erizo-de-mar.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Erizo de Mar</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                    </tr>
+                    <tr class="row-9 odd">
+                        <td class="column-1"><img src="img/tostada-con-mermelada.png" class="azulBG "><br>
+                            <p class="titRecetas">Tostada con Mermelada</p>
+                    </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño Eléctrico <b>+1%</b></p><p class="efectoRec">Daño Eléctrico <b>+45</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/frasco-de-arandanos.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Frasco de Arándanos</p></div><div class="blockIng"><img src="img/frutilla.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Frutilla</p></div><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">3</span><p class="titIngredientes">Grano Homi</p></div></td>
+                    </tr>
+                    <tr class="row-10 even">
+                        <td class="column-1"><img src="img/pasta-con-tomate-y-huevo-frito.png" class="azulBG "><br>
+                            <p class="titRecetas">Pasta con Tomate y Huevo Frito</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño de Fuego <b>+1%</b></p><p class="efectoRec">Daño de Fuego <b>+45</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/tomate-espinoso.png" class="ingredientes "><span class="cantIngr">4</span><p class="titIngredientes">Tomate Espinoso</p></div><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">3</span><p class="titIngredientes">Grano Homi</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                    </tr>
+                    <tr class="row-11 odd">
+                        <td class="column-1">
+                            <br><br><p class="titRecetas">Pastel de Fruta</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>15% + 20,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/frutilla.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Frutilla</p></div><div class="blockIng"><img src="img/grano-homi.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Grano Homi</p></div><div class="blockIng"><img src="img/fruta-caida.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Fruta Caida</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                    </tr>
+                    <tr class="row-12 even">
+                        <td class="column-1"><img src="img/vieiras-hervidas.png" class="azulBG "><br>
+                            <p class="titRecetas">Vieiras Hervidas</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>15% + 20,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/vieira.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Vieira</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">3</span><p class="titIngredientes">Lechuga</p></div></td>
+                    </tr>
+                    <tr class="row-13 odd">
+                        <td class="column-1"><img src="img/vieiras-hervidas.png" class="azulBG "><br>
+                            <p class="titRecetas">Vieiras Hervidas</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>500</b> de Resistencia</p><p class="efectoRec">Recupera <b>15% + 20,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/muslo-trasero.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Muslo Trasero</p></div></td>
+                    </tr>
+                    <tr class="row-14 even">
+                        <td class="column-1"><img src="img/pastel-de-brotes-de-helecho.png" class="azulBG "><br>
+                            <p class="titRecetas">Pastel de Brotes de Helecho</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/brote-de-helecho.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Brote de Helecho</p></div><div class="blockIng"><img src="img/arroz-marron.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz Integral</p></div></td>
+                    </tr>
+                    <tr class="row-15 odd">
+                        <td class="column-1"><img src="img/pan-de-chocolate.png" class="azulBG "><br>
+                            <p class="titRecetas">Pan de Chocolate</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/granos-de-cacao.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Granos de Chocolate</p></div><div class="blockIng"><img src="img/arroz-marron.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz Integral</p></div></td>
+                    </tr>
+                    <tr class="row-16 even">
+                        <td class="column-1">
+                            <br><br><br><p class="titRecetas">Ensalada de Fruta Globo</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/fruta-globo.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Fruta Globo</p></div><div class="blockIng"><img src="img/tomate-espinoso.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Tomate Espinoso</p></div><div class="blockIng"><img src="img/aderezo-de-ensalada.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Adereso de Ensalada</p></div></td>
+                    </tr>
+                    <tr class="row-17 odd">
+                        <td class="column-1"><img src="img/sopa-de-brotes-de-helecho.png" class="azulBG "><br>
+                            <p class="titRecetas">Sopa de Brotes de Helecho</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/brote-de-helecho.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Brote de Helecho</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">4</span><p class="titIngredientes">Lechuga</p></div></td>
+                    </tr>
+                    <tr class="row-18 even">
+                        <td class="column-1"><img src="img/anguila-picante.png" class="azulBG "><br>
+                            <p class="titRecetas">Anguila Picante</p>
+                        </td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Resistencia Eléctrica <b>+10%</b></p><p class="efectoRec">Resistencia Eléctrica <b>+290</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/anguila-electrica.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Anguila Eléctrica</p></div></td>
+                    </tr>
+                    <tr class="row-19 odd">
+                        <td class="column-1"><img src="img/sopa-de-anguila-y-hongos.png" class="azulBG "><br>
+                            <p class="titRecetas">Sopa de Anguila y Hongos</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño Eléctrico <b>+1%</b></p><p class="efectoRec">Daño Eléctrico <b>+80</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/anguila-electrica.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Anguila Eléctrica</p></div><div class="blockIng"><img src="img/hongo-de-fuego.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Hongo de Fuego</p></div></td>
+                    </tr>
+                    <tr class="row-20 even">
+                        <td class="column-1"><img src="img/sopa-de-anguila-y-hongos.png" class="azulBG "><br>
+                            <p class="titRecetas">Sopa de Cangrejo de Mar</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Resistencia al Fuego <b>+10%</b></p><p class="efectoRec">Resistencia al Fuego <b>+290</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/cangrejo-ermitaneo.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Cangrejo Ermitaño</p></div><div class="blockIng"><img src="img/hongo.png" class="ingredientes "><span class="cantIngr">4</span><p class="titIngredientes">Hongo</p></div></td>
+                    </tr>
+                    <tr class="row-21 odd">
+                        <td class="column-1"><img src="img/jugo-de-granada-dulce.png" class="azulBG "><br>
+                            <p class="titRecetas">Jugo de Granada Dulce</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>600</b> de Resistencia</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/granada.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Granada</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Miel</p></div><div class="blockIng"><img src="img/agua-con-gas.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Agua con Gas</p></div></td>
+                    </tr>
+                    <tr class="row-22 even">
+                        <td class="column-1"><img src="img/leche-chocolatada.png" class="azulBG "><br>
+                            <p class="titRecetas">Leche Chocolatada</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Resistencia al Hielo <b>+10%</b></p><p class="efectoRec">Resistencia al Hielo <b>+290</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/granos-de-cacao.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Granos de Cacao</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Miel</p></div><div class="blockIng"><img src="img/leche.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Leche</p></div></td>
+                    </tr>
+                    <tr class="row-23 odd">
+                        <td class="column-1"><br>
+                            <p class="titRecetas">Te de Fruta de Dragón de Fuego</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño de Fuego <b>+1%</b></p><p class="efectoRec">Daño de Fuego <b>+80</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><p class="titIngredientes">Fruta de Dragón de Fuego x2</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Miel</p></div></td>
+                    </tr>
+                    <tr class="row-24 even">
+                        <td class="column-1"><img src="img/estofado-de-percebes.png" class="azulBG "><br>
+                            <p class="titRecetas">Estofado de Percebes</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Resistencia Física <b>+10%</b></p><p class="efectoRec">Resistencia Física <b>+290</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/percebe.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Percebe</p></div><div class="blockIng"><img src="img/lechuga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Lechuga</p></div></td>
+                    </tr>
+                    <tr class="row-25 odd">
+                        <td class="column-1"><img src="img/pizza-de-percebes.png" class="azulBG "><br>
+                            <p class="titRecetas">Pizza de Percebes</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/percebe.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Percebe</p></div><div class="blockIng"><img src="img/arroz-marron.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz Integral</p></div><div class="blockIng"><img src="img/cebolla.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Cebolla</p></div></td>
+                    </tr>
+                    <tr class="row-26 even">
+                        <td class="column-1"><img src="img/te-de-azalea-de-nieve.png" class="azulBG "><br>
+                            <p class="titRecetas">Te de Azalea de Nieve</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño de Hielo <b>+1%</b></p><p class="efectoRec">Daño de Hielo <b>+80</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/azalea-de-nieve.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Azalea de Nieve</p></div><div class="blockIng"><img src="img/leche.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Leche</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Miel</p></div></td>
+                    </tr>
+                    <tr class="row-27 odd">
+                        <td class="column-1"><img src="img/cocoa-de-pino.png" class="azulBG "><br>
+                            <p class="titRecetas">Cocoa de Pino</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/pinion.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Piñón</p></div><div class="blockIng"><img src="img/granos-de-cacao.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Granos de Cocoa</p></div><div class="blockIng"><img src="img/leche.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Leche</p></div></td>
+                    </tr>
+                    <tr class="row-28 even">
+                        <td class="column-1"><img src="img/sushi-de-caviar.png" class="azulBG "><br>
+                            <p class="titRecetas">Sushi de Caviar</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Recupera <b>16% + 34,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/caviar.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Caviar</p></div><div class="blockIng"><img src="img/arroz.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz</p></div><div class="blockIng"><img src="img/alga.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Alga</p></div></td>
+                    </tr>
+                    <tr class="row-29 odd">
+                        <td class="column-1"><img src="img/albondigas-de-papa-y-caviar.png" class="azulBG "><br>
+                            <p class="titRecetas">Albóndigas de Papa y Caviar</p></td>
+                        <td class="column-2"><span class="estAzul">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>10</b> de Saciedad</p><p class="efectoRec">Daño Físico <b>+1%</b></p><p class="efectoRec">Daño Físico <b>+80</b></p><p class="efectoRec"> Duración <b>900</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/caviar.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Caviar</p></div><div class="blockIng"><img src="img/papa.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Papa</p></div></td>
+                    </tr>
+                </tbody>
+                </table></center>
+            </div>
+
+
+
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                <center>
+                <table class="tablepress tablaRecetas" role="grid">
+                    <thead>
+                        <tr>
+                            <th rowspan="1" colspan="1" style="width: 200px;">Receta</th>
+                            <th rowspan="1" colspan="1" style="width: 100px;">Estrellas</th>
+                            <th rowspan="1" colspan="1" style="width: 250px;">Efecto</th>
+                            <th rowspan="1" colspan="1" style="width: 400px;">Ingredientes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="row-hover">        
+                    <tr class="row-2 even">
+                        <td class="column-1"><img src="img/te-de-frutos-secos.png" class="violetaBG "><br>
+                            <p class="titRecetas">Te de Frutos Secos</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Recupera <b>20% +60,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/avellana.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Avellana</p></div><div class="blockIng"><img src="img/pinion.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Piñón</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Miel</p></div></td>
+                    </tr>
+                    <tr class="row-3 odd">
+                        <td class="column-1"><img src="img/pastel-de-batata-violeta.png" class="violetaBG "><br>
+                            <p class="titRecetas">Pastel de Batata Violeta</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Daño Eléctrico <b>+2%</b></p><p class="efectoRec">Daño Eléctrico <b>+150</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/batata-violeta.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Batata Violeta</p></div><div class="blockIng"><img src="img/arroz-marron.png" class="ingredientes "><span class="cantIngr">3</span><p class="titIngredientes">Arroz Integral</p></div></td>
+                    </tr>
+                    <tr class="row-4 even">
+                        <td class="column-1"><img src="img/sopa-de-loto-de-nieve.png" class="violetaBG "><br>
+                            <p class="titRecetas">Sopa de Loto de Nieve</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>800</b> de Resistencia</p><p class="efectoRec">Recupera <b>20% +60,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/loto-de-nieve.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Loto de Nieve</p></div><div class="blockIng"><img src="img/miel.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Miel</p></div></td>
+                    </tr>
+                    <tr class="row-5 odd">
+                        <td class="column-1"><img src="img/arroz-frito-con-trufas.png" class="violetaBG "><br>
+                            <p class="titRecetas">Arroz Frito con Trufas</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Daño Físico <b>+2%</b></p><p class="efectoRec">Daño Físico <b>+150</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/trufa-negra.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Trufa Negra</p></div><div class="blockIng"><img src="img/cebolla.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Cebolla</p></div><div class="blockIng"><img src="img/arroz.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz</p></div></td>
+                    </tr>
+                    <tr class="row-6 even">
+                        <td class="column-1"><img src="img/fideos-con-hongo-deoruga.png" class="violetaBG "><br>
+                            <p class="titRecetas">Fideos con Hongos de Oruga</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Recupera <b>20% +60,000</b> PS</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/hongo-de-oruga.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Hongo de Oruga</p></div><div class="blockIng"><img src="img/arroz-marron.png" class="ingredientes "><span class="cantIngr">3</span><p class="titIngredientes">Arroz Integral</p></div></td>
+                    </tr>
+                    <tr class="row-7 odd">
+                        <td class="column-1"><img src="img/filete-grillado.png" class="violetaBG "><br>
+                            <p class="titRecetas">Filete Grillado</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Resistencia Eléctrica <b>+15%</b></p><p class="efectoRec">Resistencia Eléctrica <b>+675</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/corte-de-primera.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Corte de Primera</p></div></td>
+                    </tr>
+                    <tr class="row-8 even">
+                        <td class="column-1"><img src="img/filete-con-salsa.png" class="violetaBG "><br>
+                            <p class="titRecetas">Filete con Salsa</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Daño de Fuego <b>+2%</b></p><p class="efectoRec">Daño de Fuego <b>+150</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/corte-de-primera.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Corte de Primera</p></div><div class="blockIng"><img src="img/hongo-de-fuego.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Hongo de Fuego</p></div></td>
+                    </tr>
+                    <tr class="row-9 odd">
+                        <td class="column-1"><img src="img/carne-braseada.png" class="violetaBG "><br>
+                            <p class="titRecetas">Carne Braseada</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Resistencia al Hielo <b>+15%</b></p><p class="efectoRec">Resistencia al Hielo <b>+675</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/panceta.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Panceta</p></div></td>
+                    </tr>
+                    <tr class="row-10 even">
+                        <td class="column-1"><img src="img/sandwich-de-panceta.png" class="violetaBG "><br>
+                            <p class="titRecetas">Sandwich de Panceta</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Resistencia al Fuego <b>+15%</b></p><p class="efectoRec">Resistencia al Fuego <b>+675</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/panceta.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Panceta</p></div><div class="blockIng"><img src="img/arroz-marron.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz Integral</p></div><div class="blockIng"><img src="img/huevo-de-ave.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Huevo de Ave</p></div></td>
+                    </tr>
+                    <tr class="row-11 odd">
+                        <td class="column-1"><img src="img/sashimi-de-salmon.png" class="violetaBG "><br>
+                            <p class="titRecetas">Sashimi de Salmón</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Daño de Hielo <b>+2%</b></p><p class="efectoRec">Daño de Hielo <b>+150</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/salmon.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Salmón</p></div></td>
+                    </tr>
+                    <tr class="row-12 even">
+                        <td class="column-1"><img src="img/caracol-al-horno-con-arroz.png" class="violetaBG "><br>
+                            <p class="titRecetas">Caracol al Horno con Arroz</p></td>
+                        <td class="column-2"><span class="estVioleta">🟊🟊</span></td>
+                        <td class="column-3"><p class="efectoRec">Recupera <b>20</b> de Saciedad</p><p class="efectoRec">Resistencia Física <b>+15%</b></p><p class="efectoRec">Resistencia Física <b>+675</b></p><p class="efectoRec">Duración <b>1200</b> seg</p></td>
+                        <td class="column-4"><div class="blockIng"><img src="img/caracol-carrion.png" class="ingredientes "><span class="cantIngr">1</span><p class="titIngredientes">Caracol Carrion</p></div><div class="blockIng"><img src="img/arroz.png" class="ingredientes "><span class="cantIngr">2</span><p class="titIngredientes">Arroz</p></div></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </center>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <p style="color:white; font-size: large;">
+                <b>© JONATHAN ALONSO LARA #19100141</b>
+            </p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+.tablepress td:active {
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255);
+}
+        
+.tablepress tbody tr:hover {
+    background-color: rgb(60, 255, 0);
+    color: rgb(255, 255, 255);
+}
+
+.list{
+    text-align: center;
+    display:inline table;
+}
+
+.tablepress{
+    border-collapse:collapse;
+    border-spacing:0;
+    width:auto;
+    margin-bottom:1em;
+    border:none
+}
+
+body{
+    background-image: linear-gradient(to bottom right, #65a0db, #0033CC, #FF77CC,  #7613BA);
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+
+/*.centrado{
+    vertical-align: middle;
+}*/
+
+li{
+    background-color: #ffffff;
+    font-weight: bolder;
+}
+
+button{
+    border:2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    text-decoration: underline;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: rgb(60, 255, 0);
+    color: rgb(255, 255, 255);
+}
+
+.tablepress td,.tablepress th{padding:8px;border:none;text-align:left;float:none!important}
+.tablepress tbody td,.tablepress tfoot th{border-top:1px solid rgb(0, 0, 0)}
+.tablepress tbody tr:first-child td{border-top:0}.tablepress thead th{border-bottom:1px solid rgb(0, 0, 0)}
+.tablepress img{margin:0;padding:0;border:none;max-width:none}
+
+.tablaRecetas th{
+    background-color:#fffefe;
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+.tablaRecetas td{
+    background-color:#ffffff;
+    color:#000000
+}
+
+.tablaRecetas .column-1{width: 200px;}
+
+.tablaRecetas .column-2{
+    width: 100px;
+    vertical-align: middle;
+}
+
+.tablaRecetas .column-3{
+    width: 250px;
+    vertical-align: middle;
+    text-align: justify;
+}
+.tablaRecetas .column-4{width: 400px;}
+
+.grisBG{width:70px;background-color:#9eb0c7;display:block;margin-bottom:0!important;margin-left:auto!important;margin-right:auto!important}
+.verdeBG{width:70px;background-color:#5cb2a0;display:block;margin-bottom:0!important;margin-left:auto!important;margin-right:auto!important}
+.azulBG{width:70px;background-color:#68a5d3;display:block;margin-bottom:0!important;margin-left:auto!important;margin-right:auto!important}
+.violetaBG{width:70px;background-color:#C7B1D4;display:block;margin-bottom:0!important;margin-left:auto!important;margin-right:auto!important}
+.titRecetas{margin-top:-10px;margin-bottom:2px!important;font-size:18px;font-weight:700;text-align:center}
+.tablaRecetas span{text-align:center;font-size:30px;display:block}
+.blockIng{
+    display:inline-block;
+    float:left;
+    margin-right:5px;
+    width:70px
+}
+.ingredientes{width:70px;display:block;margin-left:auto!important;margin-right:auto!important}
+.titIngredientes{font-size:16px;font-weight:600;text-align:center;margin-top:25px;margin-bottom:0!important}
+.efectoRec{font-size:17px;font-weight:630;margin-bottom:0!important}
+.efectoRec b{color:#15c66d}
+.cantIngr{
+    font-size:19px!important;
+    font-weight:700;
+    text-align:right!important;
+    margin-top:-30px;
+    margin-right:1px;
+    color:rgb(255, 255, 255);
+    text-shadow:1px 0 0 #000,-1px 0 0 #000,0 1px 0 #000,0 -1px 0 #000,1px 1px #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000
+}
+.estGris{color:#9ca3ac}
+.estVerde{color:#15c66d}
+.estAzul{color:#0072ff}
+.estVioleta{color:#8532b5}
