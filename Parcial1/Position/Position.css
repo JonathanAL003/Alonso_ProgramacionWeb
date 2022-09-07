@@ -1,0 +1,108 @@
+body{
+    background-image: linear-gradient(to bottom right, #1b24d5, rgb(8, 115, 254), #71218c,  #470490);
+}
+
+.cajaRelativa{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border: 5px solid rgb(0, 0, 0);
+    overflow: scroll;
+    text-align: center;
+    background-color: white;
+}
+
+.cajaAbsoluta{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid red;
+    text-align: center;
+    background-color: white;
+}
+
+.cajaAbsoluta2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid red;
+    top:300px;
+    left:50px;
+    text-align: center;
+    background-color: white;
+}
+
+.cajaFija{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top:10px;
+    right: 10px;
+    background-color: black;
+    border: 3px solid rgb(164, 164, 28);
+    text-align: center;
+}
+
+.cajaFija2{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom:10px;
+    right: 10px;
+    background-color: black;
+    border: 3px solid rgb(164, 164, 28);
+    text-align: center;
+}
+
+.cajaSticky{
+    position: sticky;
+    border: 5px solid black;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#caja2{
+    left:100px;
+    background-color: white;
+}
+
+/*ESTILOS PARA LA PINTURA*/
+
+.cajaFijaBlanca{
+    position: absolute;
+    background-color: white;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.cajaFijaRoja{
+    position: absolute;
+    background-color: red;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.cajaFijaAzul{
+    position: absolute;
+    background-color: blue;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.cajaFijaAmarilla{
+    position: absolute;
+    background-color: yellow;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.cajaFijaNegra{
+    position: absolute;
+    background-color: black;
+    border: 5px solid black;
+    text-align: center;
+}
