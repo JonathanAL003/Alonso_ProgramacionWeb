@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Menu Acordeon Bootstrap</title>
+    <style>
+      html {height: 1000px;}
+      
+      body{
+          background-image: linear-gradient(to bottom right, #65a0db, #0033CC, #FF77CC,  #7613BA);
+      }
+    </style>
+</head>
+<body>
+    <ul class="nav nav-pills nav-fill">
+        <li style="background-color: white;" class="nav-item">
+          <a class="nav-link active" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/Home.html">Home</a>
+        </li>
+        <li style="background-color: white;" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Recetas Blancas</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaBlanca/HongosFritos.html">Hongos Fritos</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaBlanca/PescadoAsadoCrujiente.html">Pescado Asado Crujiente</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaBlanca/PanIntegral.html">Pan Integral</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaBlanca/CarneMuyCaliente.html">Carne Muy Caliente</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaBlanca/EnsaladadeLechuga.html">Ensalada de Lechuga</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaBlanca/HuevoFrito.html">Huevo Frito</a>
+
+            <!-- <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a> -->
+          </div>
+        </li>
+        <li style="background-color: white;" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Recetas Verdes</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/DesayunodeCereales.html">Desayuno de Cereales</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/HamburguesadePolloCrujiente.html">Hamburguesa de Pollo Crujiente</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/ArrozyHuevoFrito.html">Arroz y Huevo Frito</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/HuevoDoradoyTomate.html">Huevo Dorado y Tomate</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/SopadeAlgasyHuevo.html">Sopa de Algas y Huevo</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/Sopadehongos.html">Sopa de hongos</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/CaracolesalVapor.html">Caracoles al Vapor</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/EstofadodeCarneyPapas.html">Estofado de Carne y Papas</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/PapasFritas.html">Papas Fritas</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/EnsaladadeVegetales.html">Ensalada de Vegetales</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/PolloFrito.html">Pollo Frito</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/JugodeFrutasyMiel.html">Jugo de Frutas y Miel</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/OrquideaHelada.html">Orquídea Helada</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/BrocoliSalteado.html">Brócoli Salteado</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/SopadeHongosyDientedeLeon.html">Sopa de Hongos y Diente de León</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/PanecillodeCarne.html">Panecillo de Carne</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/PescadoconHongos.html">Pescado con Hongos</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/PescadoconHuevo.html">Pescado con Huevo</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/PanDeTrigoRojo.html">Pan de Trigo Rojo</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/SopaDeHongodeFuego.html">Sopa de Hongo de Fuego</a>
+            <a class="dropdown-item" TYPE=button onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaVerde/SopaDeMusgoNegro.html">Sopa de Musgo Negro</a>
+          </div>
+        </li>
+        <li style="background-color: white;" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Recetas Azules</a>
+          <div class="dropdown-menu">
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/SopadeMariscos.html" class="dropdown-item">Sopa de Mariscos</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/HamburguesaPicante.html" class="dropdown-item">Hamburguesa Picante</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/CangrejoalVapor.html" class="dropdown-item">Cangrejo al Vapor</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/RefrescodeFresaHelado.html" class="dropdown-item">Refresco de Fresa Helado</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/SodaHeladadeFrutilla.html" class="dropdown-item">Soda Helada de Frutilla</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/EnsaladaPoderosaSimple.html" class="dropdown-item">Ensalada Poderosa Simple</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/HuevoalVaporconErizodeMar.html" class="dropdown-item">Huevo al Vapor con Erizo de Mar</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/TostadaconMermelada.html" class="dropdown-item">Tostada con Mermelada</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/PastaconTomateyHuevoFrito.html" class="dropdown-item">Pasta con Tomate y Huevo Frito</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/PasteldeFruta.html" class="dropdown-item">Pastel de Fruta</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/VieirasHervidas1.html" class="dropdown-item">Vieiras Hervidas #1</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/VieirasHervidas2.html" class="dropdown-item">Vieiras Hervidas #2</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/PasteldeBrotesdeHelecho.html" class="dropdown-item">Pastel de Brotes de Helecho</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/PandeChocolate.html" class="dropdown-item">Pan de Chocolate</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/EnsaladadeFrutaGlobo.html" class="dropdown-item">Ensalada de Fruta Globo</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/SopadeBrotesdeHelecho.html" class="dropdown-item">Sopa de Brotes de Helecho</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/AnguilaPicante.html" class="dropdown-item">Anguila Picante</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/SopadeAnguilayHongos.html" class="dropdown-item">Sopa de Anguila y Hongos</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/SopadeCangrejodeMar.html" class="dropdown-item">Sopa de Cangrejo de Mar</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/JugodeGranadaDulce.html" class="dropdown-item">Jugo de Granada Dulce</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/LecheChocolatada.html" class="dropdown-item">Leche Chocolatada</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/TedeFrutadeDragondeFuego.html" class="dropdown-item">Te de Fruta de Dragón de Fuego</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/EstofadodePercebes.html" class="dropdown-item">Estofado de Percebes</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/PizzadePercebes.html" class="dropdown-item">Pizza de Percebes</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/TedeAzaleadeNieve.html" class="dropdown-item">Te de Azalea de Nieve</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/CocoadePino.html" class="dropdown-item">Cocoa de Pino</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/SushideCaviar.html" class="dropdown-item">Sushi de Caviar</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaAzul/AlbondigasdePapayCaviar.html" class="dropdown-item">Albóndigas de Papa y Caviar</a>
+          </div>
+        </li>
+        <li style="background-color: white;" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Recetas Violetas</a>
+          <div class="dropdown-menu">
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/TedeFrutosSecos.html" class="dropdown-item">Te de Frutos Secos</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/PasteldeBatataVioleta.html" class="dropdown-item">Pastel de Batata Violeta</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/SopadeLotodeNieve.html" class="dropdown-item">Sopa de Loto de Nieve</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/ArrozFritoconTrufas.html" class="dropdown-item">Arroz Frito con Trufas</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/FideosconHongosdeOruga.html" class="dropdown-item">Fideos con Hongos de Oruga</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/FileteGrillado.html" class="dropdown-item">Filete Grillado</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/FileteconSalsa.html" class="dropdown-item">Filete con Salsa</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/CarneBraseada.html" class="dropdown-item">Carne Braseada</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/SandwichdePanceta.html" class="dropdown-item">Sandwich de Panceta</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/SashimideSalmon.html" class="dropdown-item">Sashimi de Salmón</a>
+            <a onClick=parent.Pagina2.location.href="../SubMenus/SubPaginas/RecetaMorada/CaracolalHornoconArroz.html" class="dropdown-item">Caracol al Horno con Arroz</a>
+          </div>
+        </li>
+      </ul>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
