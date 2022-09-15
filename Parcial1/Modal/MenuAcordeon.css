@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+div{
+    width: 100%;
+}
+
+html{
+    /* height: 550px; */
+    height: auto;
+    min-height: 143px;
+    align-items: center;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, #65a0db, #0033CC, #FF77CC,  #7613BA);
+}
+
+li{
+    width: 100%;
+}
+
+ul > li > ul{
+    display: none;
+}
+
+ul > li:hover > ul{
+    display: block;
+    height: 100%;
+}
+
+.opcion{
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
+}
+
+.subOpcion{
+    background: rgba(128, 128, 128, 0.427);
+    color: white;
+}
+
+a{color: white;}
