@@ -54,6 +54,8 @@
 #caja5{
     grid-column-start: 2;
     grid-column-end: 4;
+}
 
-
+p{
+    font-size: xx-large;
 }
