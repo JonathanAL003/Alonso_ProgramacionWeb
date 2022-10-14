@@ -10,8 +10,8 @@
 </head>
 <body>
     <P align="center">GATO</P>
-    <!--<input id="slide" type="checkbox" role="button" />
-    <label for="slide"><span>Circulo/X</span></label>-->
+    <br>
+    <button onClick="window.location.reload();">Reinciar Juego</button>
     <div id="contenedor" class="contenedor">
         <div class="caja" align="middle"></div>
         <div class="caja" align="middle"></div>
@@ -26,15 +26,32 @@
     <script>
         var elem = document.getElementById("contenedor");
         elem.addEventListener("click",cambiarCaja);
-        function cambiarCaja(evento){
+        var i = 1;
+        function cambiarCaja(evento)
+        {
             console.log(evento);
-            if (evento.target.classList.contains("caja")) 
+            if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
             {
-                evento.target.classList.toggle("cajaX")
+                if (evento.target.classList.contains("caja")) 
+                {
+                    evento.target.classList.toggle("cajaX")
+                }
             }
-            if (evento.target.id == "caja") {
-                elem.removeEventListener("click",cambiarCaja);
+            else if(i == 2 || i == 4 || i == 6 || i == 8) 
+            {
+                if (evento.target.classList.contains("caja")) 
+                {
+                    evento.target.classList.toggle("cajaO")
+                }
             }
+            else if (i >= 10) 
+            {
+                alert('Se acabaron los movimientos');
+                window.location.reload();
+                console.log("Ya no hay movimientos");
+            } 
+            i++;   
+            console.log(i);
         }
     </script>
 </body>

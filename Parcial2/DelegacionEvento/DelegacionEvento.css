@@ -27,13 +27,15 @@ p{
     text-align: center;
     border: 3px solid black;
     font-size: xx-large;
-
-    background-image: url("circulo.png");
-    background-size: 200px 200px;
 }
 
 .cajaX{
     background-image: url("X.png");
+    background-size: 200px 200px;
+}
+
+.cajaO{
+    background-image: url("circulo.png");
     background-size: 200px 200px;
 }
 
