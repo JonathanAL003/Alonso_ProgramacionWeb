@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="DelegacionEvento.css">
+
+</head>
+<body>
+    <P align="center">GATO</P>
+    <!--<input id="slide" type="checkbox" role="button" />
+    <label for="slide"><span>Circulo/X</span></label>-->
+    <div id="contenedor" class="contenedor">
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+    </div>
+    <script>
+        var elem = document.getElementById("contenedor");
+        elem.addEventListener("click",cambiarCaja);
+        function cambiarCaja(evento){
+            console.log(evento);
+            if (evento.target.classList.contains("caja")) 
+            {
+                evento.target.classList.toggle("cajaX")
+            }
+            if (evento.target.id == "caja") {
+                elem.removeEventListener("click",cambiarCaja);
+            }
+        }
+    </script>
+</body>
+</html>

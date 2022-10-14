@@ -18,18 +18,22 @@
     overflow: scroll hidden;
 }
 
+p{
+    font-size: xx-large;
+}
+
 .caja{
     background-color: aqua;
     text-align: center;
     border: 3px solid black;
     font-size: xx-large;
 
+    background-image: url("circulo.png");
+    background-size: 200px 200px;
 }
 
-.cajaX .img{
-    src: "x.png";
+.cajaX{
+    background-image: url("X.png");
+    background-size: 200px 200px;
 }
 
-p{
-    font-size: xx-large;
-}
