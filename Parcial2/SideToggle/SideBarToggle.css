@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    color: aliceblue;
+}
+
+a:hover{
+    background-color: blue;
+    color: white;
+}
+
+.contenidoOpcion{display: none;}
+#opcion1:target,#opcion2:target,#opcion3:target,#opcion4:target{display: block;}
+
+.sidebar {
+    background-color: black;
+    width: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.sidebar h1 {
+    color: white;
+}
+
+.cuerpo {
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 280px;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+    font-size: xx-large;
+    
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+
+input[type=checkbox] {
+   display: none;
+}
+
+input:checked ~ .cuerpo { 
+    left: 0;
+}
+
+input:checked ~ label {
+    left: 0;
+}
+
+label {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 280px;
+    background-color: black;
+ 
+    color: white;
+    font-size: x-large;
+    
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+
+div{
+    vertical-align: middle;
+}
+
+.sidebar a{float: left}

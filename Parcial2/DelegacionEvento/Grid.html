@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Grid.css">
+
+</head>
+<body>
+    <P align="center">GATO</P>
+    <div class="contenedor">
+        <div class="caja" align="middle"><img src="circulo.png" alt="circulo" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="circulo.png" alt="circulo" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="circulo.png" alt="circulo" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="circulo.png" alt="circulo" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="x.png" alt="X" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="X.png" alt="X" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="X.png" alt="X" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="circulo.png" alt="circulo" width="150" height="150"></div>
+        <div class="caja" align="middle"><img src="x.png" alt="X" width="150" height="150"></div>
+    </div>
+
+    <script>
+        var elem = document.getElementById("caja");
+        elem.addEventListener("click",cambiarCaja);
+        function cambiarCaja(evento){
+            console.log(evento);
+            if (document.getElementById(evento.target.id).classList.contains("caja")) {
+                document.getElementById(evento.target.id).classList.toggle("cajaX")
+            }
+            if (evento.target.id == "caja") {
+                elem.removeEventListener("click",cambiarCaja);
+            }
+        }
+    </script>
+</body>
+</html>
