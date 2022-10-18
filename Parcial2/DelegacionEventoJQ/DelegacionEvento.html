@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="DelegacionEvento.css">
+    <script src="jquery-3.6.1.min.js""></script>
+
+
+</head>
+<body>
+    <P align="center">GATO</P>
+    <br>
+    <button onClick="window.location.reload();">Reinciar Juego</button>
+    <div id="contenedor" class="contenedor">
+        <div class="caja" align="middle"><img id="imagen"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+        <div class="caja" align="middle"></div>
+    </div>
+    <script>
+        var i = 1;
+        $(document).ready(function()
+        {
+            $("#contenedor").click(function(event)
+            {
+                if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    //$("#imagen").attr("DelegacionEvento/x.png");
+                    $(event.target).html("X");
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    //$("#imagen").attr("DelegacionEvento/circulo.png");
+                    $(event.target).html("O");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+            })
+        })
+
+        /*var elem = document.getElementById("contenedor");
+        elem.addEventListener("click",cambiarCaja);
+        var i = 1;
+        function cambiarCaja(evento)
+        {
+            console.log(evento);
+            if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+            {
+                if (evento.target.classList.contains("caja")) 
+                {
+                    evento.target.classList.toggle("cajaX")
+                }
+            }
+            else if(i == 2 || i == 4 || i == 6 || i == 8) 
+            {
+                if (evento.target.classList.contains("caja")) 
+                {
+                    evento.target.classList.toggle("cajaO")
+                }
+            }
+            else if (i >= 10) 
+            {
+                alert('Se acabaron los movimientos');
+                window.location.reload();
+                console.log("Ya no hay movimientos");
+            } 
+            i++;   
+            console.log(i);
+        }*/
+    </script>
+</body>
+</html>
