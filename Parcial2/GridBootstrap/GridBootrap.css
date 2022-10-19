@@ -1,0 +1,10 @@
+#PageHeader{
+    color: white;
+    background-color: blueviolet;
+    border: 3px solid black;
+}
+
+#col{
+    border: 1px solid black;
+    background-color: aquamarine;
+}
