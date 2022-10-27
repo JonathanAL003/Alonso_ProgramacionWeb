@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ajax</title>
     <link rel="stylesheet" type="text/css" href="XMLH.css">
     <script src="jquery-3.6.1.min.js"></script>
-    <script src="CargarDiv.js""></script>
+
+    <script src="CargarDiv.js"></script>
 </head>
 <body onload=display_ct7();>
-    <P align="center">GATO</P>
+    <div id="MyDiv">
+        <h2 align="center">GATO</h2>
+    </div>
     <br>
     <div class="cajaReloj"><span id='ct7' ></span></div>
     <button onClick="window.location.reload();">Reinciar Juego</button>
+    <button id="btnajax" type="button">Cambiar Titulo </button>
     <div id="contenedor" class="contenedor">
         <div id="caja1" class="caja" align="middle"></div>
         <div id="caja2" class="caja" align="middle"></div>
@@ -25,5 +29,26 @@
         <div id="caja8" class="caja" align="middle"></div>
         <div id="caja9" class="caja" align="middle"></div>
     </div>
+    <script>  
+        window.onload = function()
+        {
+            document.getElementById("btnajax").addEventListener("click",pedirHeader);
+            
+            function pedirHeader()
+            {
+                var solicitud = new XMLHttpRequest();
+            
+                solicitud.onreadystatechange = function()
+                {
+                    if(solicitud.readyState == 4 && solicitud.status == 200)
+                    {
+                        document.getElementById("MyDiv").innerHTML = solicitud.responseText;
+                    }
+                };
+            solicitud.open("GET", "Archivo.txt",true);
+            solicitud.send();
+            }
+        }
+    </script>
 </body>
 </html>

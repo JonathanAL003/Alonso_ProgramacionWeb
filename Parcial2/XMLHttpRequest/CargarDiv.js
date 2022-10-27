@@ -5,7 +5,8 @@ $(document).ready(function()
     {
         if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
                 {
-                    var imageUrl = "X.png";
+                    var imageUrl = "https://dog.ceo/api/breeds/image/random";
+                 
                     $("#caja1").css("background-image", "url(" + imageUrl + ")");
                     
                 }
@@ -218,7 +219,6 @@ $(document).ready(function()
         
     });
 });
-
 
 function display_ct7() 
 {
