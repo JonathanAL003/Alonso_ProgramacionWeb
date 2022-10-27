@@ -1,9 +1,221 @@
 $(document).ready(function() 
 {
-    $(".caja").click(function() 
+    var i = 1;
+    $("#caja1").click(function() 
     {
-        var imageUrl = "circulo.png";
-        $(".caja").css("background-image", "url(" + imageUrl + ")");
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja1").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja1").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja2").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja2").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja2").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja3").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja3").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja3").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja4").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja4").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja4").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja5").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja5").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja5").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja6").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja6").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja6").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja7").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja7").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja7").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja8").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja8").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja8").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
+    });
+    $("#caja9").click(function() 
+    {
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) 
+                {
+                    var imageUrl = "X.png";
+                    $("#caja9").css("background-image", "url(" + imageUrl + ")");
+                    
+                }
+                else if (i == 2 || i == 4 || i == 6 || i == 8) 
+                {
+                    
+                    var imageUrl = "circulo.png";
+                    $("#caja9").css("background-image", "url(" + imageUrl + ")");
+                }
+                else if(i >= 10) 
+                {
+                    alert('Se acabaron los movimientos');
+                    window.location.reload();
+                    console.log("Ya no hay movimientos");
+                }
+                i++;
+                console.log(i);
+        
     });
 });
 
