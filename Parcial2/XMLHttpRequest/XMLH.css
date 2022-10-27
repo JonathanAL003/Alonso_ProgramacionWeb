@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    justify-items: stretch;
+    overflow: scroll hidden;
+}
+
+p{
+    font-size: xx-large;
+}
+
+.caja{
+    background-color: aqua;
+    text-align: center;
+    border: 3px solid black;
+    font-size: xx-large;
+}
+
+.cajaReloj{
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    top:10px;
+    right: 10px;
+    background-color: white;
+    border: 3px solid black;
+    text-align: center;
+}
