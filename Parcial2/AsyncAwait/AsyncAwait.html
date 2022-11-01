@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+    <link rel="stylesheet" type="text/css" href="AsyncAwait.css">
+    <script src="AsyncAwait.js"></script>
+</head>
+<body onload=display_ct7();>
+    <div class="contenedor">
+        <div id="encabezado" class="caja"><span id='ct7'></span></div>
+        <div id="menulateral" class="caja">
+            <button id="btnFetchAsync">PeticionFetchAsynAwait</button>
+        </div>
+        <div id="columna1" class="caja"><img id="imagenperro" src="dog.jpg" alt="Perro"></div>
+        <div id="columna2" class="caja"><p class="informacion"></p></div>
+        <div id="columna3" class="caja"><p class="informacion2"></p></div>
+        <div id="columna4" class="caja"><iframe id="mapa" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="same-origin"></iframe></div>
+    </div>
+</body>
+<script>
+  document.getElementById("btnFetchAsync").addEventListener("click",async function(){
+    let respuesta = await fetch("https://dog.ceo/api/breeds/image/random")
+    let datosJson = await respuesta.json();
+    document.getElementById("imagenperro").src= datosJson.message;
+    conosle.log("Datos del Async")
+    console.log(datosJson.message)
+  })
+</script>
+</html>
