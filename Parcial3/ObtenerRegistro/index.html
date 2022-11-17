@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+    <!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme CSS files as mentioned below (and change the theme property of the plugin) -->
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css" media="all" rel="stylesheet" type="text/css" />
+    <!-- important mandatory libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js" type="text/javascript"></script>
+    <!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme JS files as mentioned below (and change the theme property of the plugin) -->
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+</head>
+<body>
+  <div class="contenedor">
+    <div id="encabezado" class="prefooter">
+      <img id="imagen" src="img/Burger-King-logo.svg" alt="Logo">
+    </div>
+
+    <div id="container" class="container">
+      <div class="row">
+          <div class="col-sm-12 col1">
+              <center><h3>Formulario</h3></center>
+          </div>
+      </div>
+      <form action="">
+        <div class="row">
+          <div id="col" class="col-sm-12 col-md-2 col-lg-2">
+              <label for="idProducto" class="form-label">ID</label>
+              <input type="text" class="form-control" id="idProducto">
+            </div>
+            <div id="col" class="col-sm-12 col-md-5 col-lg-5">
+              <div class="mb-3">
+                <label for="nombreproducto" class="form-label">Nombre Producto</label>
+                <input type="text" class="form-control" id="nombreproducto">
+              </div>
+            </div>
+            <div id="col" class="col-sm-12 col-md-5 col-lg-5">
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="categoria">Categoria</label>
+                <select class="form-select" id="categoria">
+                  <option selected>Seleccione una categoria</option>
+                  <option value="1">A la parilla</option>
+                  <option value="2">Bebidas y cafe</option>
+                  <option value="3">Complementos</option>
+                  <option value="4">De Pollo</option>
+                  <option value="5">Desayunos</option>
+                  <option value="6">Ensaladas</option>
+                  <option value="7">Niños</option>
+                  <option value="8">Postres</option>
+                </select>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div id="col" class="col-sm-12 col-md-7 col-lg-8">
+            <div class="input-group">
+              <span class="input-group-text">Descripción</span>
+              <textarea id="descripcion" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+          </div>
+          <div id="col" class="col-sm-12 col-md-5 col-lg-4">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Precio Venta $</span>
+              <input id="precio" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="col" class="col-sm-12 col-md-6 col-lg-8">
+            <div class="input-group">
+              <label for="rutaimagen" class="form-label">Imagen</label>
+              <input class="form-control" type="file" id="rutaimagen">
+            </div>
+          </div>
+          <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+            <div class="input-group">
+              <label for="input-1" class="control-label">Puntuacion</label>
+              <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="col" class="col-sm-12 col-md-6 col-lg-8">
+            <div class="input-group">
+              <span class="input-group-text">Ingredientes</span>
+              <textarea id="ingredientes" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+          </div>
+          <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+            <div class="input-group">
+              <span class="input-group-text">Costo Fabricacion $</span>
+              <input id="costo" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="col" class="col-sm-12">
+            <div class="input-group">
+              <label for="formControlRange">Minutos Aprox. Cocina</label>
+              <input type="range" class="form-control-range" min="1" max="25" step=".5" id="formControlRange" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
+              <span id="rangeval">13 MINUTOS<!-- Default value --></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-primary">Registrar Formulario</button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-secondary">Actualizar Formulario</button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-danger">Eliminar Formulario</button>
+            </div>
+            <div class="col-sm-3">
+              <button id="btnGetReg" type="button" class="btn btn-info">Obtener Registro</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="endfooter">
+    <P><b>© Derechos reservados 2022 - Jonathan Alonso Lara #19100141 - ITNL</b></P>
+  </div>
+  
+    
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('#input-3').rating({displayOnly: true, step: 0.5});
+        $('#input-5').rating({clearCaption: 'No stars yet'});
+        $('#input-8').rating({rtl: true, containerClass: 'is-star'});
+        $('#input-9').rating();
+      });
+
+
+        document.getElementById("btnGetReg").addEventListener("click",function(){
+          fetch('GetRegistro.php')
+          .then(respuesta=> respuesta)
+        })
+
+        function displayCampos(reg){
+          document.getElementById(idProducto).value=reg.id
+          document.getElementById(nombreproducto).value=reg.nombreproducto
+        }
+      </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</html>
