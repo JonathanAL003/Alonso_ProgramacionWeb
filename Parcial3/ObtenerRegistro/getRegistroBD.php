@@ -1,30 +1,14 @@
 <?php
-
-$id=$_POST['par1'];
-$hostname='localhost';
-$database='BDWeb'; 
-$username='root';
-$password='';
-$port='3306';
-
-try{
-    $con = new PDO("mysql:host=$hostname;dbname=$database;port=$port",$username,$password);
-}catch(PDOException $e) {
-    echo "Error en la conexion a la BD";
-    echo $e->getMessage();
-    exit();
-}
-
-try{
-    $consultaSql = "select * from PRODUCTOS where ID_Producto=".$idProducto;
-    $consulta = $con -> prepare($consultaSql);
-    $consulta -> execute();
-    $registro = $consulta->fetch(PDO::FETCH_ASSOC);
-    $consulta->closeCursor();
-}catch(PDOException $e){
-    echo "Error en la consulta a BD";
-    echo $e->getMessage();
-}
+$registro["ID"]= "0001";
+$registro["Nombre"] = "Hamburguesa a la parilla";
+$registro["Cetegoria"] = "A la parilla";
+$registro["Descripcion"] = "Una deliciosa hamburguesa a nuestra parilal receta original";
+$registro["Precio"] = "$65";
+$registro["Imagen"] = "\img\Parilla\Whopper.png";
+$registro["Valoracion"] = "4.5";
+$registro["Ingredientes"] = "Carne, Pan, Jitomate, Lechuga, Cebolla, Queso";
+$registro["Costo"] = "$40";
+$registro["Minutos"] = "15";
 
 echo json_encode($registro);
 ?>
