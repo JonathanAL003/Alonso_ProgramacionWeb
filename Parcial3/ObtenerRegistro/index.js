@@ -5,7 +5,7 @@ btnGetRegistro.addEventListener("click", async () => {
   respuesta = await fetch("./getRegistroBD.php");
   data = await respuesta.json();
   console.log(data);
-  document.querySelector("#idProducto").value = data.ID;
+  document.querySelector("#idProducto").value = data.IDProducto;
   document.querySelector("#nombreproducto").value = data.Nombre;
   document.querySelector("#categoria").value = data.Categoria;
   document.querySelector("#descripcion").value = data.Descripcion;
