@@ -52,7 +52,7 @@
                   <center><h3>Formulario</h3></center>
               </div>
           </div>
-          <!--<form action="">-->
+          <form id="formulario">
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
                   <label for="idProducto" class="form-label">ID</label>
@@ -368,22 +368,22 @@
                   <center><h3>Formulario</h3></center>
               </div>
           </div>
-          <!--<form action="">-->
+          <form id="formulario">
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
                   <label for="idProducto" class="form-label">ID</label>
-                  <input type="text" class="form-control" id="idProducto">
+                  <input name="idProducto" type="text" class="form-control" id="idProducto">
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
                     <label for="nombreproducto" class="form-label">Nombre Producto</label>
-                    <input type="text" readonly="readonly" class="form-control" id="nombreproducto">
+                    <input name="nombreproducto" type="text" readonly="readonly" class="form-control" id="nombreproducto">
                   </div>
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
                     <label for="categoria" class="form-label">Categoria</label>
-                    <input type="text" readonly="readonly" class="form-control" id="categoria">
+                    <input name="categoria" type="text" readonly="readonly" class="form-control" id="categoria">
                   </div>
                 </div>
             </div>
@@ -392,13 +392,13 @@
               <div id="col" class="col-sm-12 col-md-7 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Descripción</span>
-                  <textarea readonly id="descripcion" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea name="descripcion" readonly id="descripcion" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-5 col-lg-4">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Precio Venta $</span>
-                  <input id="precio" type="text" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="precio" name="precio" type="text" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
@@ -406,7 +406,7 @@
               <div id="col" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="input-group">
                   <label for="rutaimagen" class="form-label">Imagen</label>
-                  <input class="form-control" readonly="readonly" type="file" id="rutaimagen">
+                  <input class="form-control" name="rutaimagen" readonly="readonly" type="file" id="rutaimagen">
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-6 col-lg-4">
@@ -421,13 +421,13 @@
               <div id="col" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Ingredientes</span>
-                  <textarea readonly="readonly" id="ingredientes" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea readonly="readonly" name="ingredientes" id="ingredientes" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-6 col-lg-4">
                 <div class="input-group">
                   <span class="input-group-text">Costo Fabricacion $</span>
-                  <input id="costo" type="text" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="costo" type="text" name="costo" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
@@ -435,8 +435,8 @@
             <div class="row">
               <div id="col" class="col-sm-12">
                 <div class="input-group">
-                  <label for="formControlRange">Minutos Aprox. Cocina</label>
-                  <input type="range" class="form-control-range" readonly="readonly" min="1" max="25" step=".5" id="formControlRange" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
+                  <label for="minutos">Minutos Aprox. Cocina</label>
+                  <input type="range" name="minutos" class="form-control-range" readonly="readonly" min="1" max="25" step=".5" id="minutos" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
                   <span id="rangeval">13 MINUTOS<!-- Default value --></span>
                 </div>
               </div>
@@ -445,11 +445,11 @@
             <div class="container text-center">
               <div class="row">
                 <div class="col-sm-3">
-                  <button id="btnGetReg" type="button" class="btn btn-info btnGetRegistro">Obtener Registro</button>
+                  <button id="btnGetRegistro" type="button" class="btn btn-info btnGetRegistro">Obtener Registro</button>
                 </div>
               </div>
             </div>
-          <!--</form>-->
+          </form>
         </div>
       </div>
     </div>

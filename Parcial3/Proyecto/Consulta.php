@@ -1,4 +1,5 @@
 <?php
+//$idProducto = $_POST['idProducto'];
 $hostname='localhost';
 $database='bdweb'; 
 $username='root';
@@ -14,7 +15,7 @@ try {
 }
 
 try {
-    $consulta ="select * from producto where Id_Producto=$idProducto";
+    $consulta ="select * from producto where Id_Producto=1";
     $registro = mysqli_query($con,$consulta) or die("Problemas en el select");
     $resultado = mysqli_fetch_all($registro, MYSQLI_ASSOC);
     mysqli_close($con);

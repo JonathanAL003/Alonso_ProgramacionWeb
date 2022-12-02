@@ -1,18 +1,22 @@
-const btnGetRegistro = document.querySelector(".btnGetRegistro");
-const formulario = document.querySelector(".formulario");
-
 btnGetRegistro.addEventListener("click", async () => {
-  respuesta = await fetch("./Consulta.php");
-  data = await respuesta.json();
+  var datosformulario = new FormData(document.getElementById("formulario"));
+  let respuesta = await fetch("./Consulta.php", {
+    method: 'POST',
+    body: datosformulario
+  })
+
+  let data = await respuesta.json();
   console.log(data);
-  document.querySelector("#idProducto").value = data.Id_Producto;
-  document.querySelector("#nombreproducto").value = data.Nombre;
-  document.querySelector("#categoria").value = data.Categoria;
-  document.querySelector("#descripcion").value = data.Descripcion;
-  document.querySelector("#precio").value = data.Precio;
-  document.querySelector("#rutaimagen").value = data.Imagen;
-  document.querySelector("#input-1").value = data.Valoracion;
-  document.querySelector("#ingredientes").value = data.Ingredientes;
-  document.querySelector("#costo").value = data.Costo;
-  document.querySelector("#rangeval").value = data.Minutos;
+  document.getElementById("idProducto").value = data.Id_Producto;
+  document.getElementById("nombreproducto").value = data.Nombre;
+  document.getElementById("categoria").value = data.Categoria;
+  document.getElementById("descripcion").value = data.Descripcion;
+  document.getElementById("precio").value = data.Precio;
+  document.getElementById("input-1").value = data.Valoracion;
+  document.getElementById("ingredientes").value = data.Ingredientes;
+  document.getElementById("costo").value = data.Costo;
+  document.getElementById("rangeval").value = data.Minutos;
 });
+
+
+  //document.querySelector("#rutaimagen").value = data.Imagen;
