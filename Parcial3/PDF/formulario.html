@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="nombre"></label>
+        <input type="text" name="nombre" id="nombre">
+        <input type="button" id="btn" value="Crear PDF">
+    </form>
+    <script>
+        document.getElementById("btn").addEventListener("click", async()=> {
+            const form = new FormData(document,getElementById('formulario'));
+
+            const results = await fetch('crearpdf.php', {
+                method: 'POST',
+                body: form
+            });
+
+            let data = await results.blob();
+            console.log(data)
+            let archivo = URL.createObjectURL(data)
+            windows.open(archivo)
+        } )
+    </script>
+</body>
+</html>
