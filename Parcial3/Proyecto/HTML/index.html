@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="index copy.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
     <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
     <!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme CSS files as mentioned below (and change the theme property of the plugin) -->
     <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css" media="all" rel="stylesheet" type="text/css" />
     <!-- important mandatory libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js" type="text/javascript"></script>
     <!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme JS files as mentioned below (and change the theme property of the plugin) -->
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
@@ -20,15 +21,19 @@
 </head>
 <body>
   <div id="encabezado" class="prefooter">
-    <img id="imagen" src="img/Burger-King-logo.svg" alt="Logo">
+    <img id="imagen" src="../img/Burger-King-logo.svg" alt="Logo">
   </div>
   <div class="contenedor">
+
     <!--NAVBAR-->
     <div style="align-items: center;">
       <ul class="nav nav-tabs list" id="myTab" role="tablist" style="background-color: yellow;">
           <li class="nav-item" role="presentation">
               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Registrar</button>
           </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="imagen-tab" data-bs-toggle="tab" data-bs-target="#imagen-tab-pane" type="button" role="tab" aria-controls="imagen-tab-pane" aria-selected="true">Registrar o actualizar imagen</button>
+        </li>
           <li class="nav-item" role="presentation">
               <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Actualizar</button>
           </li>
@@ -52,22 +57,22 @@
                   <center><h3>Formulario</h3></center>
               </div>
           </div>
-          <form id="formulario">
+          <form  class="form" id="formulario_registrar" name="formulario_registrar" method="GET" action="../JS/Registrar.js">
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
                   <label for="idProducto" class="form-label">ID</label>
-                  <input type="text" class="form-control" id="idProducto">
+                  <input type="text" name="idProducto" class="form-control" id="idProducto">
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
                     <label for="nombreproducto" class="form-label">Nombre Producto</label>
-                    <input type="text" class="form-control" id="nombreproducto">
+                    <input type="text" name="nombreproducto" class="form-control" id="nombreproducto">
                   </div>
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="input-group mb-3">
                     <label class="input-group-text" for="categoria">Categoria</label>
-                    <select class="form-select" id="categoria">
+                    <select class="form-select" name="categoria" id="categoria">
                       <option selected>Seleccione una categoria</option>
                       <option value="1">A la parilla</option>
                       <option value="2">Bebidas y cafe</option>
@@ -86,69 +91,84 @@
               <div id="col" class="col-sm-12 col-md-7 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Descripción</span>
-                  <textarea id="descripcion" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea id="descripcion" name="descripcion" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-5 col-lg-4">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Precio Venta $</span>
-                  <input id="precio" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="precio" name="precio" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <label for="rutaimagen" class="form-label">Imagen</label>
-                  <input class="form-control" type="file" id="rutaimagen">
-                </div>
-              </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
-                <div class="input-group">
-                  <label for="input-1" class="control-label">Puntuacion</label>
-                  <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
-                </div>
-              </div>
-            </div>
-    
             <div class="row">
               <div id="col" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Ingredientes</span>
-                  <textarea id="ingredientes" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea id="ingredientes" name="ingredientes" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-6 col-lg-4">
                 <div class="input-group">
                   <span class="input-group-text">Costo Fabricacion $</span>
-                  <input id="costo" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="costo" type="text" name="costo" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
-    
             <div class="row">
-              <div id="col" class="col-sm-12">
+              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+                <div class="input-group">
+                  <label for="valoracion" class="control-label">Valoracion</label>
+                  <input id="valoracion" name="valoracion" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
+                </div>
+              </div>
+              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="input-group">
                   <label for="formControlRange">Minutos Aprox. Cocina</label>
-                  <input type="range" class="form-control-range" min="1" max="25" step=".5" id="formControlRange" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
-                  <span id="rangeval">13 MINUTOS<!-- Default value --></span>
+                  <input type="range" name="minutos" class="form-control-range" min="1" max="25" step=".5" id="formControlRange" onInput="$('#minutos').html($(this).val())">
+                  <span id="minutos">13<!-- Default value --></span>
                 </div>
               </div>
             </div>
-    
             <br>
             <div class="container text-center">
               <div class="row">
                 <div class="col-sm-3">
-                  <button type="button" class="btn btn-primary">Registrar Formulario</button>
+                  <button name="submit" id="btnRegistrar" type="button" class="btn btn-primary">Registrar Formulario</button>
                 </div>
               </div>
             </div>
-          <!--</form>-->
+          </form>
         </div>
       </div>
 
 
+
+      <div class="tab-pane fade" id="imagen-tab-pane" role="tabpanel" aria-labelledby="imagen-tab" tabindex="0">
+        <!--REGISTRAR O ACTUALIZAR IMAGEN-->
+        <div id="container" class="container formulario"> 
+          <div class="row">
+              <div class="col-sm-12 col1">
+                  <center><h3>Formulario</h3></center>
+              </div>
+          </div>
+          <form name="MiForm" id="MiForm" method="post" action="cargar.php" enctype="multipart/form-data">
+          <div class="row">
+            <div id="col" class="col-sm-12 col-md-2 col-lg-2">
+                <label for="idProducto2" class="form-label">ID</label>
+                <input type="text" class="form-control" id="idProducto2">
+                <br>
+              </div>
+              <div id="col" class="col-sm-12 col-md-10 col-lg-10">
+                <div class="input-group mb-3">
+                    <input class="form-control" type="file" id="image" name="image">
+                    <!--<label for="image" class="form-label">Imagen</label>-->
+                </div>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
       
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         <!--ACTUALIZAR-->
@@ -158,22 +178,22 @@
                   <center><h3>Formulario</h3></center>
               </div>
           </div>
-          <!--<form action="">-->
+          <form id="formulario_actualizar">
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
-                  <label for="idProducto" class="form-label">ID</label>
-                  <input type="text" class="form-control" id="idProducto">
+                  <label for="idProducto3" class="form-label">ID</label>
+                  <input type="text" class="form-control" id="idProducto3">
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
-                    <label for="nombreproducto" class="form-label">Nombre Producto</label>
-                    <input type="text" class="form-control" id="nombreproducto">
+                    <label for="nombreproducto3" class="form-label">Nombre Producto</label>
+                    <input type="text" class="form-control" id="nombreproducto3">
                   </div>
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="input-group mb-3">
-                    <label class="input-group-text" for="categoria">Categoria</label>
-                    <select class="form-select" id="categoria">
+                    <label class="input-group-text" for="categoria3">Categoria</label>
+                    <select class="form-select" id="categoria3">
                       <option selected>Seleccione una categoria</option>
                       <option value="1">A la parilla</option>
                       <option value="2">Bebidas y cafe</option>
@@ -192,52 +212,42 @@
               <div id="col" class="col-sm-12 col-md-7 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Descripción</span>
-                  <textarea id="descripcion" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea id="descripcion3" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-5 col-lg-4">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Precio Venta $</span>
-                  <input id="precio" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="precio3" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <label for="rutaimagen" class="form-label">Imagen</label>
-                  <input class="form-control" type="file" id="rutaimagen">
-                </div>
-              </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
-                <div class="input-group">
-                  <label for="input-1" class="control-label">Puntuacion</label>
-                  <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
-                </div>
-              </div>
-            </div>
-    
             <div class="row">
               <div id="col" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Ingredientes</span>
-                  <textarea id="ingredientes" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea id="ingredientes3" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-6 col-lg-4">
                 <div class="input-group">
                   <span class="input-group-text">Costo Fabricacion $</span>
-                  <input id="costo" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="costo3" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
-    
             <div class="row">
-              <div id="col" class="col-sm-12">
+              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+                <div class="input-group">
+                  <label for="input-3" class="control-label">Puntuacion</label>
+                  <input id="input-3" name="input-3" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
+                </div>
+              </div>
+              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="input-group">
                   <label for="formControlRange">Minutos Aprox. Cocina</label>
-                  <input type="range" class="form-control-range" min="1" max="25" step=".5" id="formControlRange" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
-                  <span id="rangeval">13 MINUTOS<!-- Default value --></span>
+                  <input type="range" class="form-control-range" min="1" max="25" step=".5" id="formControlRange" onInput="$('#rangeval3').html($(this).val()+ ' MINUTOS')">
+                  <span id="rangeval3">13 MINUTOS<!-- Default value --></span>
                 </div>
               </div>
             </div>
@@ -249,7 +259,7 @@
                 </div>
               </div>
             </div>
-          <!--</form>-->
+          </form>
         </div>
       </div>
 
@@ -263,89 +273,15 @@
                   <center><h3>Formulario</h3></center>
               </div>
           </div>
-          <!--<form action="">-->
+          <form id="formulario_eliminar">
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
-                  <label for="idProducto" class="form-label">ID</label>
-                  <input type="text" class="form-control" id="idProducto">
-                </div>
-                <div id="col" class="col-sm-12 col-md-5 col-lg-5">
-                  <div class="mb-3">
-                    <label for="nombreproducto" class="form-label">Nombre Producto</label>
-                    <input type="text" class="form-control" id="nombreproducto">
-                  </div>
-                </div>
-                <div id="col" class="col-sm-12 col-md-5 col-lg-5">
-                  <div class="input-group mb-3">
-                    <label class="input-group-text" for="categoria">Categoria</label>
-                    <select class="form-select" id="categoria">
-                      <option selected>Seleccione una categoria</option>
-                      <option value="1">A la parilla</option>
-                      <option value="2">Bebidas y cafe</option>
-                      <option value="3">Complementos</option>
-                      <option value="4">De Pollo</option>
-                      <option value="5">Desayunos</option>
-                      <option value="6">Ensaladas</option>
-                      <option value="7">Niños</option>
-                      <option value="8">Postres</option>
-                    </select>
-                  </div>
-                </div>
-            </div>
-    
-            <div class="row">
-              <div id="col" class="col-sm-12 col-md-7 col-lg-8">
-                <div class="input-group">
-                  <span class="input-group-text">Descripción</span>
-                  <textarea id="descripcion" class="form-control" aria-label="With textarea"></textarea>
-                </div>
-              </div>
-              <div id="col" class="col-sm-12 col-md-5 col-lg-4">
-                <div class="input-group mb-3">
-                  <span class="input-group-text">Precio Venta $</span>
-                  <input id="precio" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <label for="rutaimagen" class="form-label">Imagen</label>
-                  <input class="form-control" type="file" id="rutaimagen">
-                </div>
-              </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
-                <div class="input-group">
-                  <label for="input-1" class="control-label">Puntuacion</label>
-                  <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
-                </div>
+                  <label for="idProducto4" class="form-label">ID</label>
+                  <input type="text" class="form-control" id="idProducto4">
+                  <br>
               </div>
             </div>
     
-            <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <span class="input-group-text">Ingredientes</span>
-                  <textarea id="ingredientes" class="form-control" aria-label="With textarea"></textarea>
-                </div>
-              </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
-                <div class="input-group">
-                  <span class="input-group-text">Costo Fabricacion $</span>
-                  <input id="costo" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                </div>
-              </div>
-            </div>
-    
-            <div class="row">
-              <div id="col" class="col-sm-12">
-                <div class="input-group">
-                  <label for="formControlRange">Minutos Aprox. Cocina</label>
-                  <input type="range" class="form-control-range" min="1" max="25" step=".5" id="formControlRange" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
-                  <span id="rangeval">13 MINUTOS<!-- Default value --></span>
-                </div>
-              </div>
-            </div>
             <br>
             <div class="container text-center">
               <div class="row">
@@ -354,7 +290,7 @@
                 </div>
               </div>
             </div>
-          <!--</form>-->
+          </form>
         </div>
       </div>
 
@@ -368,22 +304,22 @@
                   <center><h3>Formulario</h3></center>
               </div>
           </div>
-          <form id="formulario">
+          <form id="formulario_consulta">
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
-                  <label for="idProducto" class="form-label">ID</label>
-                  <input name="idProducto" type="text" class="form-control" id="idProducto">
+                  <label for="Id_Producto" class="form-label">ID</label>
+                  <input name="Id_Producto" type="text" class="form-control" id="Id_Producto">
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
-                    <label for="nombreproducto" class="form-label">Nombre Producto</label>
-                    <input name="nombreproducto" type="text" readonly="readonly" class="form-control" id="nombreproducto">
+                    <label for="Nombre" class="form-label">Nombre Producto</label>
+                    <input name="Nombre" type="text" readonly="readonly" class="form-control" id="Nombre">
                   </div>
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
-                    <label for="categoria" class="form-label">Categoria</label>
-                    <input name="categoria" type="text" readonly="readonly" class="form-control" id="categoria">
+                    <label for="Categoria" class="form-label">Categoria</label>
+                    <input name="Categoria" type="text" readonly="readonly" class="form-control" id="Categoria">
                   </div>
                 </div>
             </div>
@@ -392,27 +328,28 @@
               <div id="col" class="col-sm-12 col-md-7 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Descripción</span>
-                  <textarea name="descripcion" readonly id="descripcion" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea name="Descripcion" readonly id="Descripcion" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-5 col-lg-4">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Precio Venta $</span>
-                  <input id="precio" name="precio" type="text" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="Precio" name="Precio" type="text" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
             <div class="row">
               <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <label for="rutaimagen" class="form-label">Imagen</label>
-                  <input class="form-control" name="rutaimagen" readonly="readonly" type="file" id="rutaimagen">
+                <div class="panel panel-primary">
+                  <div class="panel-body">
+                    <img src='../PHP/Registrar.php?id=1' alt='Imagen' width="200" />      
+                  </div> 
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-6 col-lg-4">
                 <div class="input-group">
-                  <label for="input-1" class="control-label">Puntuacion</label>
-                  <input id="input-1" name="input-1" readonly="readonly" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
+                  <label for="Valoracion" class="control-label">Puntuacion</label>
+                  <input id="Valoracion" name="Valoracion" readonly="readonly" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
                 </div>
               </div>
             </div>
@@ -421,13 +358,13 @@
               <div id="col" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Ingredientes</span>
-                  <textarea readonly="readonly" name="ingredientes" id="ingredientes" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea readonly="readonly" name="Ingredientes" id="Ingredientes" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-6 col-lg-4">
                 <div class="input-group">
                   <span class="input-group-text">Costo Fabricacion $</span>
-                  <input id="costo" type="text" name="costo" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="Costo" type="text" name="Costo" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
@@ -436,7 +373,7 @@
               <div id="col" class="col-sm-12">
                 <div class="input-group">
                   <label for="minutos">Minutos Aprox. Cocina</label>
-                  <input type="range" name="minutos" class="form-control-range" readonly="readonly" min="1" max="25" step=".5" id="minutos" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
+                  <input type="range" name="Minutos" class="form-control-range" readonly="readonly" min="1" max="25" step=".5" id="Minutos" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
                   <span id="rangeval">13 MINUTOS<!-- Default value --></span>
                 </div>
               </div>
@@ -461,8 +398,6 @@
   <footer class="endfooter">
     <P><b>© Derechos reservados 2022 - Jonathan Alonso Lara #19100141 - ITNL</b></P>
   </footer>
-
-  
     <script>
       $(document).ready(function(){
         $('#input-3').rating({displayOnly: true, step: 0.5});
@@ -476,5 +411,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<script src="../JS/Consulta.js"></script>
+<script src="../JS/Registrar.js"></script>
+<script src="../JS/ConsultaImagen.js"></script>
 </html>

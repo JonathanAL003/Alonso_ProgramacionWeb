@@ -1,5 +1,4 @@
 #imagen{
-      position: absolute;
       width: 100px;
       height: auto;
       top: 0;
@@ -9,31 +8,21 @@
       margin: auto;
 }
 
-.contenedor{
-    width: 100vw;
-    height: 95vh;
-    background-color: white;
-    display: grid;
-    grid-template-rows: 15% 80%;
-    grid-template-areas:'encabezado'
-                        'container'; 
-}
-
-#encabezado{grid-area: encabezado;}
-#container{grid-area: container;}
-
-
 .prefooter{
-    position: relative;
+    width: 100vw;
+    height: auto;
     background-color: #4b1f14;
+    text-align: center;
 }
 
 .endfooter{
     background-color: #4b1f14;
     color: white;
-    height: 5vh;
-    align-items: center;
-    display: bottom;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
 }
 
 #col{
