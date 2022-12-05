@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <form id="formulario">
-        <label for="nombre"></label>
-        <input type="text" name="nombre" id="nombre">
-        <input type="button" id="btn" value="Crear PDF">
-    </form>
-    <script>
-        document.getElementById("btn").addEventListener("click", async()=> {
-            const form = new FormData(document,getElementById('formulario'));
+  </head>
+  <body>
+    <div class="main">
+      <form id="form">
+        <div class="form-header">
+          <h1>Generador de PDF's</h1>
+        </div>
+        <div class="form-group">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"/>
+        </div>
+        <div class="form-group">
+            <label for="telefono" class="form-label">Telefono:</label>
+            <input type="text" id="telefono" name="telefono"/>
+        </div>
+        <br>
+        <button id="btn" type="button">Generar PDF</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector("#btn");
 
-            const results = await fetch('crearpdf.php', {
-                method: 'POST',
-                body: form
-            });
+    btn.addEventListener("click", async () => {
+      let headersList = { Accept: "*/*" };
+      let formNombre = document.querySelector("#form");
+      let cuerpo = new FormData(formNombre);
 
-            let data = await results.blob();
-            console.log(data)
-            let archivo = URL.createObjectURL(data)
-            windows.open(archivo)
-        } )
-    </script>
-</body>
+      let response = await fetch("http://localhost/Alonso_ProgramacionWeb/Parcial3/PDF/crearpdf.php", {
+        method: "POST",
+        body: cuerpo,
+        headers: headersList,
+      });
+
+      let data = await response.blob();
+      console.log(data);
+      let archivoURL = URL.createObjectURL(data);
+      window.open(archivoURL);
+    });
+  </script>
 </html>
