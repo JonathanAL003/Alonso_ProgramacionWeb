@@ -15,7 +15,8 @@ try {
 }
 
 try {
-    $consultaSql ="SELECT Id_Producto,Nombre,Categoria,Descripcion,Precio,Valoracion,Ingredientes,Costo,Minutos FROM producto WHERE Id_Producto=1";
+    $id = $_GET['id'];
+    $consultaSql ="SELECT Id_Producto,Nombre,Categoria,Descripcion,Precio,Valoracion,Ingredientes,Costo,Minutos FROM producto WHERE Id_Producto=$id";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);

@@ -1,32 +1,36 @@
 <?php
 if(isset($_POST["submit"])){
-    $check = getimagesize($_FILES["image"]["tmp_name"]);
-    if($check !== false){
+    $revisar = getimagesize($_FILES["image"]["tmp_name"]);
+    if($revisar !== false){
         $image = $_FILES['image']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image));
-        $idP=$_POST['var1'];
-
-         //Credenciales Mysql
-         $Host = 'localhost';
-         $Username = 'root';
-         $Password = '';
-         $dbName = 'bdweb';
-         
-         //Crear conexion con la abse de datos
-         $db = new mysqli($Host, $Username, $Password, $dbName);
-
-        $insert = $db->query("UPDATE productos SET Imagen='$imgContent' WHERE Id_Producto=$idP");
-        if($insert)
-        {
-            echo "File uploaded successfully.";
+        $imgContenido = addslashes(file_get_contents($image));
+        
+        //Credenciales Mysql
+        $Host = 'localhost';
+        $Username = 'root';
+        $Password = '';
+        $dbName = 'bdweb';
+        
+        //Crear conexion con la abse de datos
+        $db = new mysqli($Host, $Username, $Password, $dbName);
+        $Id_Producto = $_POST['idProducto3'];
+        // Cerciorar la conexion
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
         }
-        else
-        {
-            echo "File upload failed, please try again.";
+        
+        
+        //Insertar imagen en la base de datos
+        $insertar = $db->query("UPDATE producto SET Imagen ='$imgContenido' WHERE Id_Producto=$Id_Producto");
+        // COndicional para verificar la subida del fichero
+        if($insertar){
+            echo "Archivo Subido Correctamente.";
+        }else{
+            echo "Ha fallado la subida, reintente nuevamente.";
         } 
-    }else
-    {
-        echo "Please select an image file to upload.";
+        // Sie el usuario no selecciona ninguna imagen
+    }else{
+        echo "Por favor seleccione imagen a subir.";
     }
 }
 ?>

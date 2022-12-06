@@ -155,16 +155,20 @@
           <form name="MiForm" id="MiForm" method="post" action="cargar.php" enctype="multipart/form-data">
           <div class="row">
             <div id="col" class="col-sm-12 col-md-2 col-lg-2">
-                <label for="idProducto2" class="form-label">ID</label>
-                <input type="text" class="form-control" id="idProducto2">
+                <label for="idProducto3" class="form-label">ID</label>
+                <input type="text" class="form-control" id="idProducto3">
                 <br>
               </div>
               <div id="col" class="col-sm-12 col-md-10 col-lg-10">
                 <div class="input-group mb-3">
                     <input class="form-control" type="file" id="image" name="image">
-                    <!--<label for="image" class="form-label">Imagen</label>-->
                 </div>
               </div>
+          </div>
+          <div class="row">
+            <div id="col" class="col-sm-12 col-md-12 col-lg-12">
+              <button id="btnSubirImagen" type="button" class="btn btn-info btnSubirImagen">Subir Imagen</button>
+            </div>
           </div>
           </form>
         </div>
@@ -181,29 +185,19 @@
           <form id="formulario_actualizar">
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
-                  <label for="idProducto3" class="form-label">ID</label>
-                  <input type="text" class="form-control" id="idProducto3">
+                  <label for="Id_Producto2" class="form-label">ID</label>
+                  <input name="Id_Producto2" readonly="readonly" type="text" class="form-control" id="Id_Producto2">
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
-                    <label for="nombreproducto3" class="form-label">Nombre Producto</label>
-                    <input type="text" class="form-control" id="nombreproducto3">
+                    <label for="Nombre2" class="form-label">Nombre Producto</label>
+                    <input name="Nombre2" type="text" class="form-control" id="Nombre2">
                   </div>
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
-                  <div class="input-group mb-3">
-                    <label class="input-group-text" for="categoria3">Categoria</label>
-                    <select class="form-select" id="categoria3">
-                      <option selected>Seleccione una categoria</option>
-                      <option value="1">A la parilla</option>
-                      <option value="2">Bebidas y cafe</option>
-                      <option value="3">Complementos</option>
-                      <option value="4">De Pollo</option>
-                      <option value="5">Desayunos</option>
-                      <option value="6">Ensaladas</option>
-                      <option value="7">Niños</option>
-                      <option value="8">Postres</option>
-                    </select>
+                  <div class="mb-3">
+                    <label for="Categoria2" class="form-label">Categoria</label>
+                    <input name="Categoria2" type="text"  class="form-control" id="Categoria2">
                   </div>
                 </div>
             </div>
@@ -212,42 +206,42 @@
               <div id="col" class="col-sm-12 col-md-7 col-lg-8">
                 <div class="input-group">
                   <span class="input-group-text">Descripción</span>
-                  <textarea id="descripcion3" class="form-control" aria-label="With textarea"></textarea>
+                  <textarea name="Descripcion2"  id="Descripcion2" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
               <div id="col" class="col-sm-12 col-md-5 col-lg-4">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Precio Venta $</span>
-                  <input id="precio3" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="Precio2" name="Precio2" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
             <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <span class="input-group-text">Ingredientes</span>
-                  <textarea id="ingredientes3" class="form-control" aria-label="With textarea"></textarea>
+              <div id="col" class="col-sm-12 col-md-4 col-lg-4">
+                <div class="input-group mb-3">
+                  <label for="Minutos2" class="form-label">Minutos</label>
+                  <input name="Minutos2" type="text" class="form-control" id="Minutos2">
                 </div>
               </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+              <div id="col" class="col-sm-12 col-md-4 col-lg-4">
+                <div class="input-group">
+                  <label for="Valoracion2" class="form-label">Valoracion</label>
+                  <input name="Valoracion2" type="text" class="form-control" id="Valoracion2">
+                </div>
+              </div>
+              <div id="col" class="col-sm-12 col-md-4 col-lg-4">
                 <div class="input-group">
                   <span class="input-group-text">Costo Fabricacion $</span>
-                  <input id="costo3" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="Costo2" type="text" name="Costo2" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
               </div>
             </div>
+    
             <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+              <div id="col" class="col-sm-12 col-md-12 col-lg-128">
                 <div class="input-group">
-                  <label for="input-3" class="control-label">Puntuacion</label>
-                  <input id="input-3" name="input-3" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
-                </div>
-              </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <label for="formControlRange">Minutos Aprox. Cocina</label>
-                  <input type="range" class="form-control-range" min="1" max="25" step=".5" id="formControlRange" onInput="$('#rangeval3').html($(this).val()+ ' MINUTOS')">
-                  <span id="rangeval3">13 MINUTOS<!-- Default value --></span>
+                  <span class="input-group-text">Ingredientes</span>
+                  <textarea name="Ingredientes2" id="Ingredientes2" class="form-control" aria-label="With textarea"></textarea>
                 </div>
               </div>
             </div>
@@ -255,7 +249,10 @@
             <div class="container text-center">
               <div class="row">
                 <div class="col-sm-3">
-                  <button type="button" class="btn btn-secondary">Actualizar Formulario</button>
+                  <button id="btnPrepararDatos"  type="button" class="btn btn-info btnPrepararDatos">Preparar Datos</button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="btnActualizar"  type="button" class="btn btn-secondary">Actualizar Formulario</button>
                 </div>
               </div>
             </div>
@@ -272,25 +269,17 @@
               <div class="col-sm-12 col1">
                   <center><h3>Formulario</h3></center>
               </div>
-          </div>
-          <form id="formulario_eliminar">
-            <div class="row">
-              <div id="col" class="col-sm-12 col-md-2 col-lg-2">
-                  <label for="idProducto4" class="form-label">ID</label>
-                  <input type="text" class="form-control" id="idProducto4">
-                  <br>
-              </div>
-            </div>
-    
+          </div>    
+            <br>
+            <div id="jsGrid"></div>
             <br>
             <div class="container text-center">
               <div class="row">
                 <div class="col-sm-3">
-                  <button type="button" class="btn btn-danger">Eliminar Formulario</button>
+                  <button id="btnEliminar" type="button" class="btn btn-danger btnEliminar">Eliminar Formulario</button>
                 </div>
               </div>
             </div>
-          </form>
         </div>
       </div>
 
@@ -308,7 +297,7 @@
             <div class="row">
               <div id="col" class="col-sm-12 col-md-2 col-lg-2">
                   <label for="Id_Producto" class="form-label">ID</label>
-                  <input name="Id_Producto" type="text" class="form-control" id="Id_Producto">
+                  <input name="Id_Producto" readonly="readonly" type="text" class="form-control" id="Id_Producto">
                 </div>
                 <div id="col" class="col-sm-12 col-md-5 col-lg-5">
                   <div class="mb-3">
@@ -339,29 +328,19 @@
               </div>
             </div>
             <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="panel panel-primary">
-                  <div class="panel-body">
-                    <img src='../PHP/Registrar.php?id=1' alt='Imagen' width="200" />      
-                  </div> 
+              <div id="col" class="col-sm-12 col-md-4 col-lg-4">
+                <div class="input-group mb-3">
+                  <label for="Minutos" class="form-label">Minutos</label>
+                  <input name="Minutos" type="text" readonly="readonly" class="form-control" id="Minutos">
                 </div>
               </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+              <div id="col" class="col-sm-12 col-md-4 col-lg-4">
                 <div class="input-group">
-                  <label for="Valoracion" class="control-label">Puntuacion</label>
-                  <input id="Valoracion" name="Valoracion" readonly="readonly" class="rating rating-loading" data-min="0" data-max="5" data-step=".5">
+                  <label for="Valoracion" class="form-label">Valoracion</label>
+                  <input name="Valoracion" type="text" readonly="readonly" class="form-control" id="Valoracion">
                 </div>
               </div>
-            </div>
-    
-            <div class="row">
-              <div id="col" class="col-sm-12 col-md-6 col-lg-8">
-                <div class="input-group">
-                  <span class="input-group-text">Ingredientes</span>
-                  <textarea readonly="readonly" name="Ingredientes" id="Ingredientes" class="form-control" aria-label="With textarea"></textarea>
-                </div>
-              </div>
-              <div id="col" class="col-sm-12 col-md-6 col-lg-4">
+              <div id="col" class="col-sm-12 col-md-4 col-lg-4">
                 <div class="input-group">
                   <span class="input-group-text">Costo Fabricacion $</span>
                   <input id="Costo" type="text" name="Costo" readonly="readonly" class="form-control" aria-label="Amount (to the nearest dollar)">
@@ -370,11 +349,20 @@
             </div>
     
             <div class="row">
-              <div id="col" class="col-sm-12">
+              <div id="col" class="col-sm-12 col-md-12 col-lg-128">
                 <div class="input-group">
-                  <label for="minutos">Minutos Aprox. Cocina</label>
-                  <input type="range" name="Minutos" class="form-control-range" readonly="readonly" min="1" max="25" step=".5" id="Minutos" onInput="$('#rangeval').html($(this).val()+ ' MINUTOS')">
-                  <span id="rangeval">13 MINUTOS<!-- Default value --></span>
+                  <span class="input-group-text">Ingredientes</span>
+                  <textarea readonly="readonly" name="Ingredientes" id="Ingredientes" class="form-control" aria-label="With textarea"></textarea>
+                </div>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div id="col" class="col-sm-12">
+                <div class="panel panel-primary">
+                  <div class="panel-body">
+                    <img src='../PHP/Registrar.php?id=1' alt='Imagen' width="200" />      
+                  </div> 
                 </div>
               </div>
             </div>
@@ -413,5 +401,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="../JS/Consulta.js"></script>
 <script src="../JS/Registrar.js"></script>
+<script src="../JS/RegistrarImagen.js"></script>
+<script src="../JS/PrepararActualizar.js"></script>
+<script src="../JS/Actualizar.js"></script>
+<script src="../JS/Eliminar.js"></script>
 <script src="../JS/ConsultaImagen.js"></script>
+<script src="../JS/jsGrid.js"></script>
+<script src="../JS/jquery-3.6.1.min.js"></script>
 </html>

@@ -1,14 +1,10 @@
 <?php
-//$id = $_POST['idProducto'];
-
-
 if(!empty($_GET['id'])){
     //Credenciales de conexion
     $Host = 'localhost';
     $Username = 'root';
     $Password = '';
     $dbName = 'bdweb';
-    $port='3306';
     
     //Crear conexion mysql
     $db = new mysqli($Host, $Username, $Password, $dbName);
@@ -17,9 +13,9 @@ if(!empty($_GET['id'])){
     if($db->connect_error){
        die("Connection failed: " . $db->connect_error);
     }
-    
+    $id = $_GET['id'];
     //Extraer imagen de la BD mediante GET
-    $result = $db->query("SELECT Imagen FROM producto WHERE Id_Producto=1"); //= {$_GET['id']}");
+    $result = $db->query("SELECT Imagen FROM producto WHERE Id_Producto= $id");
     
     if($result->num_rows > 0){
         $imgDatos = $result->fetch_assoc();
